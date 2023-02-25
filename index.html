@@ -6,13 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
-    />
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css">
     <link rel="stylesheet" href="./css/style.css" />
     <title>WebStudio</title>
   </head>
@@ -22,8 +20,7 @@
       <div class="page-header container">
         <nav class="nav">
           <a class="logo-link" href="./index.html"
-            ><span class="logo">Web</span>Studio</a
-          >
+            ><span class="logo">Web</span>Studio</a>
           <ul class="nav-list">
             <li class="nav-item">
               <a class="nav-link current" href="./index.html">Studio</a>
@@ -36,6 +33,7 @@
             </li>
           </ul>
         </nav>
+        <!--Contacts-->
         <address class="contacts">
           <ul class="contacts-list">
             <li class="contacts-item">
@@ -50,7 +48,19 @@
             </li>
           </ul>
         </address>
+        <!--Burger-->
+        <button 
+         type="button"
+         class="menu-toggle js-open-menu" 
+         aria-controls="mobile-menu" 
+         aria-expanded="false">
+          <svg class="menu-toggle-icon" width="32" height="22">
+            <use href="./images/icons.svg#icon-hamburger"></use>
+          </svg>
+        </button>
+        <!--Burger-->
       </div>
+
     </header>
     <main>
       <!--Hero section-->
@@ -65,7 +75,7 @@
       <!--Strategy section-->
       <section class="strategy-section section">
         <div class="container">
-          <h2 class="strategy-title" hidden>About</h2>
+          <h2 class="strategy-title visually-hidden">About</h2>
           <ul class="strategy-list">
             <li class="strategy-item">
               <div class="strategy-icon-conteiner">
@@ -124,31 +134,51 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="concept-list">
             <li class="concept-item">
+              <picture
+              ><source
+                media="(min-width: 1200px)"
+                srcset="
+                  ./images/img-1.jpg 1x,
+                  ./images/img-1-2x.jpg 2x
+                "
+                type="image/jpg"/>
               <img
-                class="concept-img"
                 src="./images/img-1.jpg"
-                alt="Desktop PC"
+                alt="Analys"
                 width="360"
                 height="300"
-              />
+            /></picture>
+            <li class="concept-item">
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                  ./images/img-2.jpg 1x,
+                  ./images/img-2-2x.jpg 2x
+                  "
+                  type="image/jpg"/>
+                <img
+                  src="./images/img-2.jpg"
+                  alt="Web-site"
+                  width="360"
+                  height="300"
+              /></picture>
             </li>
             <li class="concept-item">
-              <img
-                class="concept-img"
-                src="./images/img-2.jpg"
-                alt="Smartphone interface"
-                width="360"
-                height="300"
-              />
-            </li>
-            <li class="concept-item">
-              <img
-                class="concept-img"
-                src="./images/img-3.jpg"
-                alt="Smartphone in hand"
-                width="360"
-                height="300"
-              />
+              <picture>
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                  ./images/img-3.jpg 1x,
+                  ./images/img-3-2x.jpg 2x
+                  "
+                  type="image/jpg"/>
+                <img
+                  src="./images/img-3.jpg"
+                  alt="Web-site"
+                  width="360"
+                  height="300"
+              /></picture>
             </li>
           </ul>
         </div>
@@ -160,9 +190,12 @@
           <ul class="team-list">
             <li class="team-item">
               <img
-                class="team-img"
+                srcset="
+                ./images/teamcard-1.jpg 1x,
+                ./images/teamcard-1-2x.jpg 2x
+                "
                 src="./images/teamcard-1.jpg"
-                alt="Product Designer image"
+                alt="Mark Guerrero"
                 width="264"
                 height="260"
               />
@@ -203,9 +236,12 @@
             </li>
             <li class="team-item">
               <img
-                class="team-img"
+                srcset="
+                ./images/teamcard-2.jpg 1x,
+                ./images/teamcard-2-2x.jpg 2x
+                "
                 src="./images/teamcard-2.jpg"
-                alt="image"
+                alt="Tom Ford"
                 width="264"
                 height="260"
               />
@@ -246,9 +282,12 @@
             </li>
             <li class="team-item">
               <img
-                class="team-img"
+                srcset="
+                ./images/teamcard-3.jpg 1x,
+                ./images/teamcard-3-2x.jpg 2x
+                "
                 src="./images/teamcard-3.jpg"
-                alt="Frontend Developer image"
+                alt="Camila Garcia"
                 width="264"
                 height="260"
               />
@@ -289,9 +328,12 @@
             </li>
             <li class="team-item">
               <img
-                class="team-img"
+                srcset="
+                ./images/teamcard-4.jpg 1x,
+                ./images/teamcard-4-2x.jpg 2x
+                "
                 src="./images/teamcard-4.jpg"
-                alt="UI Designer image"
+                alt="Daniel Wilson"
                 width="264"
                 height="260"
               />
@@ -385,18 +427,19 @@
       </section>
     </main>
     <!--Footer section-->
-    <footer class="footer-section">
-      <div class="container footer-wrapper">
+  <footer class="footer-section section">
+    <div class="footer-wrapper container">
+      <div class="footer-conteiner">
         <div class="footer-logo-conteiner">
           <a class="logo-link" href="./index.html"
             ><span class="logo">Web</span
-            ><span class="logo-ligth">Studio</span></a
-          >
+            ><span class="logo-ligth">Studio</span></a>
           <p class="footer-content">
             Increase the flow of customers and sales for your business with
             digital marketing & growth solutions.
           </p>
         </div>
+
         <div class="footer-icons-conteiner">
           <p class="footer-section-text">Social media</p>
           <ul class="footer-social-networks">
@@ -430,7 +473,7 @@
             </li>
           </ul>
         </div>
-
+      </div>
         <div class="subscribe-form">
           <label for="email" class="section-sub-title footer-section"
             >Subscribe</label
@@ -502,7 +545,70 @@
           <button class="submit hero-btn" type="submit">Send</button>
         </form>
       </div>
-    </div>
+    </div>  
+     <!--Mobile menu-->
+<div class="menu-container js-menu-container" id="mobile-menu">
+  <button class="menu-toggle js-close-menu">
+    <svg class="mob-modal-icon" width="8" height="8">
+    <use href="./images/icons.svg#close-btn"></use>
+    </svg>
+  </button>
+  <ul class="mob-menu">
+    <li class="mobile-link-items"><a href="" class="link-mobile link">Studio</a></li>
+    <li class="mobile-link-items"><a href="/portfolio.html" class="link-mobile link">Portfolio</a></li>
+    <li class="mobile-link-items"><a href="" class="link-mobile link menu-link-current">Contacts</a></li>
+  </ul>
+  <ul class="contacts-list-mobile">
+    <li class="contacts-item">
+      <a class="contact-link current" href="mailto:info@devstudio.com"
+        >+11 (000) 111-11-11</a
+      >
+    </li>
+    <li>
+      <a class="contact-link" href="tel:+110001111111"
+        >info@devstudio.com</a
+      >
+    </li>
+  </ul>
+ <ul class="mob-social-networks">
+  <li class="footer-social-items">
+    <a href="" class="mobile-social-link">
+      <svg class="footer-social-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-instagram"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="footer-social-items">
+    <a href="#" class="mobile-social-link">
+      <svg class="footer-social-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="footer-social-items">
+    <a href="#" class="mobile-social-link">
+      <svg class="footer-social-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="footer-social-items">
+    <a href="" class="mobile-social-link">
+      <svg class="footer-social-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-linkedin"></use>
+      </svg>
+    </a>
+  </li>
+ </ul>
+</div>
+
+      <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="modal.js"></script>
+    <script src="mobile-menu.js"></script>
   </body>
 </html>
